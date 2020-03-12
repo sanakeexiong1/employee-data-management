@@ -6,110 +6,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Data Management</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"
-        </head>
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylsheet" href="style.css">
+        <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script type="text/javascript" src="empapp.js"></script>
+</head>
 
 <body>
     <!--Jumbotron for header-->
     <div class="container">
         <div class="row">
-            <div class="col-lg-8">
-                <div class="jumbotron">
-                    <h1 class="display-4">Employee Data Management</h1>
-                    <p class="lead">A Comprehensive Directory of Employee Billable Hours</p>
+            <div class="col-xl-10">
+                <div class="jumbotron" id="jumbotron">
+                    <h1>Employee Data Management</h1>
+                    <p>A Comprehensive Directory of Employee Billable Hours</p>
                 </div>
                 <!--Table to store input values-->
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Employee Name</th>
-                            <th scope="col">Role</th>
-                            <th scope="col">Start Date</th>
-                            <th scope="col">Months Worked</th>
-                            <th scope="col">Monthly Rate ($)</th>
-                            <th scope="col">Total Billed($)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="card-header">
+                    Employee Information
+                    <hr>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Employee Name</th>
+                                <th scope="col">Role</th>
+                                <th scope="col">Start Date</th>
+                                <th scope="col">Months Worked</th>
+                                <th scope="col">Monthly Rate ($)</th>
+                                <th scope="col">Total Billed($)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
 
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>Frank</td>
+                                <td>Bill</td>
+                                <td>Jim</td>
+                                <td>Thomas</td>
+                            </tr>
+                            <tr>
+
+                                <td>CEO</td>
+                                <td>CFO</td>
+                                <td>CCO</td>
+                                <td>CLO</td>
+                                <td>CMO</td>
+                                <td>CPO</td>
+                            </tr>
+                            <tr>
+
+                                <td>01/01/1999</td>
+                                <td>03/10/1969</td>
+                                <td>02/14/2019</td>
+                                <td>05/31/1948</td>
+                                <td>06/02/1990</td>
+                                <td>06/18/1997</td>
+                            </tr>
+                            <tr>
+
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+
+                                <td>78000</td>
+                                <td>58000</td>
+                                <td>69000</td>
+                                <td>54000</td>
+                                <td>88500</td>
+                                <td>69500</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <hr>
                 <!--Form for input-->
                 <form>
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Email address</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                            placeholder="name@example.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">Example select</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect2">Example multiple select</label>
-                        <select multiple class="form-control" id="exampleFormControlSelect2">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Example textarea</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="card-header">
+                        Employee Form 
+                        <hr>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Employee Name</label>
+                            <input type="name" class="form-control" id="name-input" placeholder="Jango Smith">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Role</label>
+                            <input type="text" class="form-control" id="Role-input"
+                                placeholder="Manager of Employee Engagement">
+                            </input>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect2">Example multiple select</label>
+                            <input type="date" class="form-control" id="date-input" placeholder="01/01/2000">
+                            </input>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Monthly Rate ($)</label>
+                            <input type="date" class="form-control" id="rate-input" placeholder="85000">
+                            </input>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
                     </div>
                 </form>
 

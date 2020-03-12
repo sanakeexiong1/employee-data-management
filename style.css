@@ -1,0 +1,9 @@
+.container {
+    float: none;
+    margin: 0 auto;   
+}
+
+#jumbotron {
+    background-color: black;
+    color: white;
+}
