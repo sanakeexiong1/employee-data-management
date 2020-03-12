@@ -7,11 +7,11 @@
     <title>Employee Data Management</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylsheet" href="style.css">
-        <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
-        <script src="https://code.jquery.com/jquery.js"></script>
-        <script type="text/javascript" src="empapp.js"></script>
+    <link rel="stylsheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="empapp.js"></script>
 </head>
 
 <body>
@@ -42,46 +42,44 @@
                             <tr>
 
                                 <td>Mark</td>
-                                <td>Otto</td>
-                                <td>Frank</td>
-                                <td>Bill</td>
-                                <td>Jim</td>
-                                <td>Thomas</td>
-                            </tr>
-                            <tr>
-
                                 <td>CEO</td>
-                                <td>CFO</td>
-                                <td>CCO</td>
-                                <td>CLO</td>
-                                <td>CMO</td>
-                                <td>CPO</td>
-                            </tr>
-                            <tr>
-
-                                <td>01/01/1999</td>
                                 <td>03/10/1969</td>
-                                <td>02/14/2019</td>
-                                <td>05/31/1948</td>
-                                <td>06/02/1990</td>
-                                <td>06/18/1997</td>
+                                <td> </td>
+                                <td>69500</td>
+
                             </tr>
                             <tr>
 
+
+                                <td>Ted</td>
+                                <td>CFO</td>
+                                <td>03/10/1969</td>
                                 <td> </td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
+                                <td>69500</td>
                             </tr>
                             <tr>
 
-                                <td>78000</td>
-                                <td>58000</td>
-                                <td>69000</td>
-                                <td>54000</td>
-                                <td>88500</td>
+                                <td>Steve</td>
+                                <td>CPO</td>
+                                <td>03/10/1969</td>
+                                <td> </td>
+                                <td>69500</td>
+                            </tr>
+                            <tr>
+
+
+                                <td>Dave</td>
+                                <td>CLO</td>
+                                <td>03/10/1969</td>
+                                <td> </td>
+                                <td>69500</td>
+                            </tr>
+                            <tr>
+
+                                <td>Jim</td>
+                                <td>CMO</td>
+                                <td>03/10/1969</td>
+                                <td> </td>
                                 <td>69500</td>
                             </tr>
 
@@ -92,7 +90,7 @@
                 <!--Form for input-->
                 <form>
                     <div class="card-header">
-                        Employee Form 
+                        Employee Form
                         <hr>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Employee Name</label>
@@ -111,7 +109,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Monthly Rate ($)</label>
-                            <input type="date" class="form-control" id="rate-input" placeholder="85000">
+                            <input type="money" class="form-control" id="rate-input" placeholder="85000">
                             </input>
                         </div>
                         <div>
